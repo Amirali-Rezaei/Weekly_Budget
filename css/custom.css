@@ -1,0 +1,104 @@
+body {
+  background: #000428; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #004e92, #000428);
+  background: linear-gradient(to right, #004e92, #000428);
+  text-align: right;
+  font-family: vazir-medium;
+}
+
+header {
+  margin: 30px 0;
+}
+.content {
+  padding: 20px;
+}
+.main-content {
+  background-color: white;
+  padding: 30px 30px 20px 30px;
+  border-radius: 20px;
+}
+.budget p {
+  margin-bottom: 0;
+  font-weight: bold;
+}
+.budget p span {
+  font-weight: normal;
+}
+#expenses {
+  margin-bottom: 10px;
+  padding: 5px;
+}
+#expense ul {
+  list-style-type: disc;
+}
+h1 {
+  font-weight: 100;
+  color: white;
+}
+h2 {
+  font-weight: 100;
+  color: #004e92;
+  font-size: 22px;
+  margin-bottom: 30px;
+}
+
+@font-face {
+  font-family: Vazir;
+  src: url("Vazir-Bold.eot");
+  src: url("Vazir-Bold.eot?#iefix") format("embedded-opentype"),
+    url("Vazir-Bold.woff2") format("woff2"),
+    url("Vazir-Bold.woff") format("woff"),
+    url("Vazir-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: Vazir-bold;
+  src: url("Vazir-Black.eot");
+  src: url("Vazir-Black.eot?#iefix") format("embedded-opentype"),
+    url("Vazir-Black.woff2") format("woff2"),
+    url("Vazir-Black.woff") format("woff"),
+    url("Vazir-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: Vazir-medium;
+  src: url("Vazir-Medium.eot");
+  src: url("Vazir-Medium.eot?#iefix") format("embedded-opentype"),
+    url("Vazir-Medium.woff2") format("woff2"),
+    url("Vazir-Medium.woff") format("woff"),
+    url("Vazir-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: Vazir;
+  src: url("Vazir-Light.eot");
+  src: url("Vazir-Light.eot?#iefix") format("embedded-opentype"),
+    url("Vazir-Light.woff2") format("woff2"),
+    url("Vazir-Light.woff") format("woff"),
+    url("Vazir-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: Vazir;
+  src: url("Vazir-Thin.eot");
+  src: url("Vazir-Thin.eot?#iefix") format("embedded-opentype"),
+    url("Vazir-Thin.woff2") format("woff2"),
+    url("Vazir-Thin.woff") format("woff"),
+    url("Vazir-Thin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+.mt-0-8 {
+  margin-top: 0.8rem !important;
+}
+
+.list-group {
+  margin-bottom: 0;
+  padding-right: 13px;
+  list-style-type: arabic-indic;
+}

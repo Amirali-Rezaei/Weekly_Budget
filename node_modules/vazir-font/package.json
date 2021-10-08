@@ -1,0 +1,53 @@
+{
+  "_from": "vazir-font",
+  "_id": "vazir-font@23.0.0",
+  "_inBundle": false,
+  "_integrity": "sha512-VtXvOQyIQXyt0oVGc8gfQ8zMHOeW5Uv2X9hGWVROZTZ8O7Lr5WXzmZxUBHsuQfayXw1etPB/aDVBoOTuivk04w==",
+  "_location": "/vazir-font",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "vazir-font",
+    "name": "vazir-font",
+    "escapedName": "vazir-font",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/vazir-font/-/vazir-font-23.0.0.tgz",
+  "_shasum": "92d5668d5fe2c118534b169389dfa016e6319476",
+  "_spec": "vazir-font",
+  "_where": "/Volumes/MEGAJS/Courses/JS/Modern js (Project-oreinted)       18/7. PROJECT Save into local storage from HTML Form 0.40/LocalStorageForm",
+  "author": {
+    "name": "Behnood Khani",
+    "email": "behnood.reg@gmail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/rastikerdar/vazir-font/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "A Persian (Farsi) Font - قلم (فونت) فارسی وزیر",
+  "homepage": "https://github.com/rastikerdar/vazir-font#readme",
+  "keywords": [
+    "font",
+    "farsi",
+    "persian"
+  ],
+  "license": "Public Domain",
+  "main": "index.js",
+  "name": "vazir-font",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rastikerdar/vazir-font.git"
+  },
+  "scripts": {
+    "test": "echo \"visit http://rastikerdar.github.io/vazir-font/\""
+  },
+  "version": "23.0.0"
+}
