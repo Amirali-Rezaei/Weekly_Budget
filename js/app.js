@@ -14,8 +14,35 @@ class LocalStorageWorks {
     return localStorage.getItem("weekBudget");
   }
 
+  getExpenseFromLocalStorage() {
+    let expenses;
+
+    // Checks If The LocalStorage Is Empty Or Not
+    if (localStorage.getItem("expenses")) {
+      expenses = JSON.parse(localStorage.getItem("expenses"));
+    } else {
+      expenses = [];
+    }
+
+    return expenses;
+  }
+
   clearLocalStorage() {
     localStorage.removeItem("weekBudget");
+    localStorage.removeItem("expenses");
+  }
+
+  saveExpenseToLocalStorage(expenseName, amount) {
+    let expenses = this.getExpenseFromLocalStorage();
+    const expense = {
+      expenseName: expenseName,
+      amount: amount,
+    };
+
+    // Adds The New Course To The Courses Array
+    expenses.push(expense);
+
+    localStorage.setItem("expenses", JSON.stringify(expenses));
   }
 }
 
@@ -23,8 +50,12 @@ class LocalStorageWorks {
 class Html {
   // Insert user budget to document method
   insertBudget(amount) {
-    budgetTotal.innerHTML = amount;
-    budgetLeft.innerHTML = amount;
+    budgetTotal.innerHTML = `${amount
+      .toString()
+      .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`;
+    budgetLeft.innerHTML = `${amount
+      .toString()
+      .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`;
   }
 
   // Print all messages for user
@@ -37,10 +68,10 @@ class Html {
   }
 
   // Add expenses to the html
-  insertExpenseToHtml(name, amount) {
+  insertExpenseToHtml(expenseName, amount) {
     const expensesUl = document.querySelector("#expenses ul");
     const expenseLi = document.createElement("li");
-    expenseLi.innerHTML = `${name}: ${amount
+    expenseLi.innerHTML = `${expenseName}: ${amount
       .toString()
       .replace(/\B(?=(\d{3})+(?!\d))/g, ",")} تومان`;
     expensesUl.appendChild(expenseLi);
@@ -76,6 +107,13 @@ function eventListeners() {
     } else {
       html.insertBudget(localStorageWorks.getBudgetFromLocalStorage());
     }
+
+    if (localStorage.getItem("expenses") != null) {
+      const expenses = localStorageWorks.getExpenseFromLocalStorage();
+      expenses.forEach((expense) => {
+        html.insertExpenseToHtml(expense.expenseName, expense.amount);
+      });
+    }
   });
 
   clearBudget.addEventListener("click", function () {
@@ -98,6 +136,7 @@ function eventListeners() {
       }, 1500);
     } else {
       html.insertExpenseToHtml(expense, amount);
+      localStorageWorks.saveExpenseToLocalStorage(expense, amount);
     }
   });
 }
