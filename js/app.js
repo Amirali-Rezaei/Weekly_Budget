@@ -74,7 +74,7 @@ class Html {
     expenseLi.className =
       "list-group-item d-flex justify-content-between align-items-center margin-5";
     expenseLi.innerHTML = `${expenseName} 
-    <span>${amount
+    <span class="badge badge-primary badge-pill p-2">${amount
       .toString()
       .replace(/\B(?=(\d{3})+(?!\d))/g, ",")} تومان</span>`;
     expensesUl.appendChild(expenseLi);
