@@ -73,7 +73,7 @@ class Html {
     const expenseLi = document.createElement("li");
     expenseLi.className =
       "list-group-item d-flex justify-content-between align-items-center margin-5";
-    expenseLi.innerHTML = `${expenseName} 
+    expenseLi.innerHTML = `<span>${expenseName}</span> 
     <span class="badge badge-primary badge-pill p-2">${amount
       .toString()
       .replace(/\B(?=(\d{3})+(?!\d))/g, ",")} تومان</span>`;
