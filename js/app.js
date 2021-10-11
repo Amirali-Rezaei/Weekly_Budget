@@ -71,9 +71,12 @@ class Html {
   insertExpenseToHtml(expenseName, amount) {
     const expensesUl = document.querySelector("#expenses ul");
     const expenseLi = document.createElement("li");
-    expenseLi.innerHTML = `${expenseName}: ${amount
+    expenseLi.className =
+      "list-group-item d-flex justify-content-between align-items-center margin-5";
+    expenseLi.innerHTML = `${expenseName} 
+    <span>${amount
       .toString()
-      .replace(/\B(?=(\d{3})+(?!\d))/g, ",")} تومان`;
+      .replace(/\B(?=(\d{3})+(?!\d))/g, ",")} تومان</span>`;
     expensesUl.appendChild(expenseLi);
   }
 }
